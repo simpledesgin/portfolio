@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="website icon" href="C:\Users\SURENDRA\OneDrive\Desktop\so.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        .container{
+            background-color: white;
+            color: black;
+        }
+        #header{
+            width: 100%;
+            padding: 40px 6%;
+            position: fixed;
+            z-index: 69;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        #header .header-left h1{
+            color: pink;
+            text-transform: uppercase;
+            font-size: 28px;
+            font-weight: 900;
+            overflow: hidden;
+            animation:title .2s ease-in forwards;
+            transition: all .2s;
+            animation-delay: 1.5s;
+            opacity:0;
+        }
+        @keyframes title{
+            0%{
+                transform: translateX(-300px);
+                opacity: 0;
+            }
+            100%{
+                transform: translateX(0);
+                opacity: 1;
+            }
+
+        }
+        .header-right nav ul li{
+            display: inline-block;
+            animation: na .2s ease-in-out forwards;
+            overflow: hidden;
+            opacity: 0;
+            animation-delay: calc(.2s*var(--i));
+            transition: all .2s;
+        }
+        @keyframes na{
+            0%{
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            100%{
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+        .header-right nav ul li a{
+            text-decoration: none;
+            font-size: 18px;
+            text-transform: uppercase;
+            color: white;
+            margin-right: 40px;
+            margin-left: 10px;
+            position: relative;
+            
+        }
+        .header-right nav ul li a::before{
+            content: '';
+            position:absolute;
+            left: 0;
+            bottom: -8px;
+            width:0;
+            height: 2px;
+            background-color: white;
+            transition: all .4s;
+        }
+        .header-right nav ul li a:hover::before{
+            width: 100%;
+        }
+    
+        #header-bottom{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 100px 6%;
+            background: linear-gradient(rgba(0,0,0,0.6),#0b0d19);
+        }
+        #header-bottom .header-bottom-left{
+            margin-top: 200px;
+        }
+        .header-bottom-left h1{
+            font-size: 68px;
+            text-transform: capitalize;
+            text-shadow: 10px;
+            margin-bottom: 6x;
+            color: white;
+        }
+        .header-bottom-left h1::first-letter{
+            color:red;
+        }
+        .header-bottom-left h5{
+            font-size: 28px;
+            text-transform: capitalize;
+            word-spacing: 10px;
+            margin-bottom: 8px;
+            color: white;
+        }
+        .header-bottom-left p{
+            text-transform: capitalize;
+            font-size: 18px;
+            font-weight: 400;
+            color: white;
+        }
+        .header-bottom-left .cv{
+            display: inline-block;
+            margin-top: 25px;
+            text-decoration: none;
+            color: white;
+            text-transform: capitalize;
+            padding: 10px 20px;
+            background-color:blue;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 14px;
+            transition: all .3s;
+        }
+        .header-bottom-left .cv:hover{
+            transform: scale(1.1);
+        }
+        .header-bottom-right{
+            padding:20px 4%;
+        }
+        .header-bottom-right a{
+            display: block;
+            padding: 10px;
+            margin-top: 30px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.2);
+            animation: zax .2s ease-in-out forwards;
+            animation-delay: calc(.2s*var(--i));
+            transition: transform .2s;
+        }
+     
+        .header-bottom-right a i{
+            font-size: 18px;
+            color: white;
+            
+        }
+        .header-bottom-right a:hover{
+            transform: scale(1.1);
+        }
+        .header-bottom-right a:hover i{
+            color:yellow;
+        }
+        @keyframes zax{
+            0%{
+                transform: translatex(-200px);
+                opacity: 0;
+            }
+            100%{
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section id="header">
+            <div class="header-left">
+                <h1>portfolio</h1>
+            </div>
+            <div class="header-right">
+                <nav>
+                    <ul>
+                        <li style="--i:1"><a href="#header" class="hello">home</a></li>
+                        <li style="--i:2"><a href="#about" >about</a></li>
+                        <li style="--i:3"><a href="#portfilo" >portfolio</a></li>
+                        <li style="--i:4"><a href="#contact" >contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <section id="header-bottom">
+            <div class="header-bottom-left">
+                <h1> surendra</h1>
+                <h5>i am <span class="my">web developer</span></h5>
+                <p class="short-desc">passionate about building high-quality web applications,<br> eager to learn and grow.</p>
+                <a href="portfolio/pdf.pdf" target="_blank" download="cv.pdf" class="cv">download resume</a>
+            </div>
+            <div class="header-bottom-right">
+                <a href="C:\Users\SURENDRA\OneDrive\Desktop\e&t\eat.html" style="--i:5" id="my" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" style="--i:6"><i class="fa-brands fa-github"></i></a>
+                <a href="#" style="--i:7"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </section>
+    </div>
+
+        let az=document.getElementById("my")
+        az.addEventListener("mouseover",()=>{
+            az.style.transform="scale(2)";
+        })
+    </script>
+</body>
+</html>
